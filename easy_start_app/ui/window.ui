@@ -164,8 +164,53 @@
     <string>ApiPost</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="redisBtn">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>230</y>
+     <width>75</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>75</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>redis</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="mysqlBtn">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>230</y>
+     <width>75</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>75</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>mysql</string>
+   </property>
+  </widget>
  </widget>
-  <connections>
+ <resources/>
+ <connections>
   <connection>
    <sender>weChatBtn</sender>
    <signal>clicked()</signal>
@@ -278,5 +323,37 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>redisBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>207</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>414</x>
+     <y>214</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>mysqlBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>347</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>414</x>
+     <y>214</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
- </ui>
+</ui>
