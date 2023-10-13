@@ -88,6 +88,15 @@ class MainDialog(QDialog):
         else:
             print("Redis未安装或安装路径不正确。")
 
+    def apiBost(self):
+        # 遍历当前系统中所有进程，并检查微信是否在运行
+        self.kill_Thread("ApiPost7.exe")
+        # 如果微信可执行文件存在，则启动微信
+        if os.path.exists(self.app_path["ApiPost7.exe"]):
+            os.startfile(self.app_path["ApiPost7.exe"])
+        else:
+            print("Redis未安装或安装路径不正确。")
+
     def startAll(self):
         for key in self.app_path:
             print(key)
