@@ -2,12 +2,13 @@
 easy_start_app  通过python快速启动应用APP
 
 
-# ui 变python文件
-pyuic5 -o outputUI.py InputUI.ui
+# ui 变python文件 软件 designer.exe
+pyuic5 -o window.py window.ui
+   
 
 # 打包 exe文件命令
  
-# 打包 exe文件命令 停缴图标
+# 打包 exe文件命令  设置图标
 pyinstaller -F -w -i C:\Users\10078\IdeaProjects\PyProjects\easy_start_app\src\image\favicon.ico shortcut.py 
 
 

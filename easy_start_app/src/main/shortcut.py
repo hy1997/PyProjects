@@ -14,11 +14,11 @@ class MainDialog(QDialog):
         # 初始化应用程序的路径字典
         self.app_path = {
             "WeChat.exe": r"D:\software\WeChat\WeChat.exe",
-            "idea64.exe": r"D:\work\IntelliJ IDEA 2021.2\bin\idea64.exe",
+            "idea64.exe": r"D:\IntelliJ IDEA 2021.2\bin\idea64.exe",
             "navicat.exe": r"D:\work\Navicat Premium 16\navicat.exe",
             "openvpn-gui.exe": r"C:\Program Files\OpenVPN\bin\openvpn-gui.exe",
-            "sublime_text.exe": r"D:\work\Sublime Text\sublime_text.exe",
-            "ApiPost7.exe": r"D:\software\apipost\ApiPost7.exe",
+            "Notepad++.exe": r"D:\work\Notepad++\Notepad++.exe",
+            "Apifox.exe": r"D:\work\Apifox\Apifox.exe",
             "mysql.exe": r"D:\MySQL\MySQL Server 5.7\bin\mysql.exe",
             "redis-server.exe": r"D:\work\Redis-x64-5.0.14.1\redis-server.exe",
         }
@@ -61,10 +61,10 @@ class MainDialog(QDialog):
 
     def startSublime(self):
         # 遍历当前系统中所有进程，并检查微信是否在运行
-        self.kill_Thread("sublime_text.exe")
+        self.kill_Thread("Notepad++.exe")
         # 如果微信可执行文件存在，则启动微信
-        if os.path.exists(self.app_path["sublime_text.exe"]):
-            os.startfile(self.app_path["sublime_text.exe"])
+        if os.path.exists(self.app_path["Notepad++.exe"]):
+            os.startfile(self.app_path["Notepad++.exe"])
         else:
             print("Sublime未安装或安装路径不正确。")
 
@@ -90,12 +90,12 @@ class MainDialog(QDialog):
 
     def apiBost(self):
         # 遍历当前系统中所有进程，并检查微信是否在运行
-        self.kill_Thread("ApiPost7.exe")
+        self.kill_Thread("Apifox.exe")
         # 如果微信可执行文件存在，则启动微信
-        if os.path.exists(self.app_path["ApiPost7.exe"]):
-            os.startfile(self.app_path["ApiPost7.exe"])
+        if os.path.exists(self.app_path["Apifox.exe"]):
+            os.startfile(self.app_path["Apifox.exe"])
         else:
-            print("Redis未安装或安装路径不正确。")
+            print("Apifox未安装或安装路径不正确。")
 
     def startAll(self):
         for key in self.app_path:

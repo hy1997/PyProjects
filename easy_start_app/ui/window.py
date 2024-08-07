@@ -14,63 +14,72 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(585, 356)
+        Dialog.resize(840, 360)
         self.weChatBtn = QtWidgets.QPushButton(Dialog)
         self.weChatBtn.setEnabled(True)
-        self.weChatBtn.setGeometry(QtCore.QRect(0, 130, 75, 50))
+        self.weChatBtn.setGeometry(QtCore.QRect(140, 110, 75, 50))
         self.weChatBtn.setMaximumSize(QtCore.QSize(75, 16777215))
-        self.weChatBtn.setDefault(False)
+        self.weChatBtn.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+        self.weChatBtn.setAutoExclusive(False)
+        self.weChatBtn.setDefault(True)
         self.weChatBtn.setFlat(False)
         self.weChatBtn.setObjectName("weChatBtn")
         self.ideaBtn = QtWidgets.QPushButton(Dialog)
         self.ideaBtn.setEnabled(True)
-        self.ideaBtn.setGeometry(QtCore.QRect(170, 130, 75, 50))
+        self.ideaBtn.setGeometry(QtCore.QRect(310, 110, 75, 50))
         self.ideaBtn.setMaximumSize(QtCore.QSize(75, 16777215))
+        self.ideaBtn.setDefault(True)
         self.ideaBtn.setObjectName("ideaBtn")
         self.NavicatBtn = QtWidgets.QPushButton(Dialog)
         self.NavicatBtn.setEnabled(True)
-        self.NavicatBtn.setGeometry(QtCore.QRect(350, 130, 75, 50))
+        self.NavicatBtn.setGeometry(QtCore.QRect(490, 110, 75, 50))
         self.NavicatBtn.setMaximumSize(QtCore.QSize(75, 16777215))
+        self.NavicatBtn.setDefault(True)
         self.NavicatBtn.setObjectName("NavicatBtn")
         self.openVpnBtn = QtWidgets.QPushButton(Dialog)
         self.openVpnBtn.setEnabled(True)
-        self.openVpnBtn.setGeometry(QtCore.QRect(510, 240, 75, 50))
+        self.openVpnBtn.setGeometry(QtCore.QRect(650, 220, 75, 50))
         self.openVpnBtn.setMaximumSize(QtCore.QSize(75, 16777215))
+        self.openVpnBtn.setDefault(True)
         self.openVpnBtn.setObjectName("openVpnBtn")
         self.sublimeBtn = QtWidgets.QPushButton(Dialog)
         self.sublimeBtn.setEnabled(True)
-        self.sublimeBtn.setGeometry(QtCore.QRect(0, 240, 75, 50))
+        self.sublimeBtn.setGeometry(QtCore.QRect(140, 220, 75, 50))
         self.sublimeBtn.setMaximumSize(QtCore.QSize(75, 16777215))
+        self.sublimeBtn.setDefault(True)
         self.sublimeBtn.setObjectName("sublimeBtn")
         self.startAllbut = QtWidgets.QPushButton(Dialog)
-        self.startAllbut.setGeometry(QtCore.QRect(240, 50, 91, 51))
+        self.startAllbut.setGeometry(QtCore.QRect(390, 20, 91, 51))
         self.startAllbut.setObjectName("startAllbut")
         self.apiBostBtn = QtWidgets.QPushButton(Dialog)
         self.apiBostBtn.setEnabled(True)
-        self.apiBostBtn.setGeometry(QtCore.QRect(510, 130, 75, 50))
+        self.apiBostBtn.setGeometry(QtCore.QRect(650, 110, 75, 50))
         self.apiBostBtn.setMaximumSize(QtCore.QSize(75, 16777215))
+        self.apiBostBtn.setDefault(True)
         self.apiBostBtn.setObjectName("apiBostBtn")
         self.redisBtn = QtWidgets.QPushButton(Dialog)
         self.redisBtn.setEnabled(True)
-        self.redisBtn.setGeometry(QtCore.QRect(170, 240, 75, 50))
+        self.redisBtn.setGeometry(QtCore.QRect(310, 220, 75, 50))
         self.redisBtn.setMaximumSize(QtCore.QSize(75, 16777215))
+        self.redisBtn.setDefault(True)
         self.redisBtn.setObjectName("redisBtn")
         self.mysqlBtn = QtWidgets.QPushButton(Dialog)
         self.mysqlBtn.setEnabled(True)
-        self.mysqlBtn.setGeometry(QtCore.QRect(350, 240, 75, 50))
+        self.mysqlBtn.setGeometry(QtCore.QRect(490, 220, 75, 50))
         self.mysqlBtn.setMaximumSize(QtCore.QSize(75, 16777215))
+        self.mysqlBtn.setDefault(True)
         self.mysqlBtn.setObjectName("mysqlBtn")
 
         self.retranslateUi(Dialog)
-        self.weChatBtn.clicked.connect(Dialog.startWeChat) # type: ignore
-        self.ideaBtn.clicked.connect(Dialog.startIdea) # type: ignore
-        self.NavicatBtn.clicked.connect(Dialog.startNavicat) # type: ignore
-        self.openVpnBtn.clicked.connect(Dialog.startOpenVpn) # type: ignore
-        self.sublimeBtn.clicked.connect(Dialog.startSublime) # type: ignore
-        self.startAllbut.clicked.connect(Dialog.startAll) # type: ignore
-        self.apiBostBtn.clicked.connect(Dialog.apiBost) # type: ignore
-        self.redisBtn.clicked.connect(Dialog.startRedis) # type: ignore
-        self.mysqlBtn.clicked.connect(Dialog.startMysql) # type: ignore
+        self.weChatBtn.clicked.connect(Dialog.accept) # type: ignore
+        self.ideaBtn.clicked.connect(Dialog.accept) # type: ignore
+        self.NavicatBtn.clicked.connect(Dialog.accept) # type: ignore
+        self.openVpnBtn.clicked.connect(Dialog.accept) # type: ignore
+        self.sublimeBtn.clicked.connect(Dialog.accept) # type: ignore
+        self.apiBostBtn.clicked.connect(Dialog.accept) # type: ignore
+        self.redisBtn.clicked.connect(Dialog.accept) # type: ignore
+        self.mysqlBtn.clicked.connect(Dialog.accept) # type: ignore
+        self.startAllbut.clicked.connect(Dialog.accept) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
     def retranslateUi(self, Dialog):
@@ -80,8 +89,8 @@ class Ui_Dialog(object):
         self.ideaBtn.setText(_translate("Dialog", "idea"))
         self.NavicatBtn.setText(_translate("Dialog", "navicat"))
         self.openVpnBtn.setText(_translate("Dialog", "openVpn"))
-        self.sublimeBtn.setText(_translate("Dialog", "sublime"))
+        self.sublimeBtn.setText(_translate("Dialog", "notepad++"))
         self.startAllbut.setText(_translate("Dialog", "startAll"))
-        self.apiBostBtn.setText(_translate("Dialog", "ApiPost"))
+        self.apiBostBtn.setText(_translate("Dialog", "apifox"))
         self.redisBtn.setText(_translate("Dialog", "redis"))
         self.mysqlBtn.setText(_translate("Dialog", "mysql"))
